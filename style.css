@@ -1,0 +1,70 @@
+/* designs for the whole page */
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.section-heading {
+    font-size: 50px;
+    color: black;
+    font-weight: 100;
+}
+
+:root {
+    /* colors */
+    --white-color: white;
+    --second-white: rgb(224, 219, 219);
+}
+
+/* body */
+body {
+    font-family: sans-serif;
+}
+header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    
+}
+.hero-vid {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+header .navbar {
+    
+    background-color: transparent;
+    position: relative;
+}
+header .navbar .list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+}
+header .navbar .list .nav-item .nav-link{
+    color: white;
+}
+
+header .navbar .list .nav-item .home-icon {
+    width: 30px;
+}
+
+/* tourism section */
+.tourism-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    margin: auto;
+}
