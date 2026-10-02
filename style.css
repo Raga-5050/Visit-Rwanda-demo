@@ -68,3 +68,9 @@ header .navbar .list .nav-item .home-icon {
     max-width: 700px;
     margin: auto;
 }
+.highlights-container .scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
