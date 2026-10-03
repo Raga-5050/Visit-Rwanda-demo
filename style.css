@@ -77,6 +77,7 @@ header .navbar .list .nav-item .home-icon {
     margin: auto;
     text-align: center;
 }
+
 .highlights-container .scroll {
     display: flex;
     overflow-x: auto;
@@ -99,20 +100,38 @@ header .navbar .list .nav-item .home-icon {
     scroll-snap-align: start;
 
 }
-.highlights-container .highlights .words-div {
+.highlights .words-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.highlights-container .highlights .words {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
+    gap: 15px;
+
 }
+
 .highlights-container .highlights .words-div, .image-div {
     flex: 1;
     width: 50%;
+    height: 500px;
 }
 .highlights-container .highlights .image-div .highlight-image {
     /* keep image's crisp without stretching */
     object-fit: cover;
+    object-position: center;
     width: 700px;
+}
+.highlights .words-div .title {
+margin-bottom: 0;
+}
+.highlights .words-div .section-heading, .section-paragragh {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .highlights .words-div .button-link {
     padding: 15px;
@@ -126,16 +145,20 @@ header .navbar .list .nav-item .home-icon {
     justify-content: center;
     gap: 10px;
     
+
 }
 .highlights .words-div .carousel-dots .dot {
     background-color: grey;
     padding: 10px;
     border-radius: 50%;
-    align-items: flex-end;
+    display: inline-bl0ck;
+    
+
 }
-.highlights .words-div .carousel-dots .dot-active {
+ .carousel-dots .dot-active {
     background-color: rgb(3, 3, 82);
-    padding: 10px;
+     padding: 10px;
     border-radius: 50%;
+    display: inline-block;
 }
 
