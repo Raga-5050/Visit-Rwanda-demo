@@ -24,7 +24,7 @@ button {
 
 /* body */
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 header {
     position: relative;
@@ -43,7 +43,8 @@ header {
 header .navbar {
     
     background-color: transparent;
-    position: relative;
+    position: fixed;
+    z-index: 5;
 }
 header .navbar .list {
     display: flex;
@@ -53,12 +54,19 @@ header .navbar .list {
 }
 header .navbar .list .nav-item .nav-link{
     color: white;
+    transition: 0.3s ease;
 }
-
+header .navbar .list .nav-item .nav-link:hover {
+    color: rgb(206, 205, 205);
+    font-size: 20px;
+}
 header .navbar .list .nav-item .home-icon {
     width: 30px;
+    transition: o.3s ease;
 }
-
+.nav-item .home-icon:hover {
+    background-color: rgba(128, 128, 128, 0.418);
+}
 /* tourism section */
 .tourism-section .content {
     display: flex;
@@ -67,10 +75,67 @@ header .navbar .list .nav-item .home-icon {
     justify-content: center;
     max-width: 700px;
     margin: auto;
+    text-align: center;
 }
 .highlights-container .scroll {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
+/* hide scroll bar on chrome */
+.scroll::-webkit-scrollbar {
+    display: none; 
+}
+.highlights-container .scroll .highlights {
+    display: flex;
+    /* force each slide to take full width of the container */
+    flex: 0 0 100%;
+    width: 100%;
+    /* tells the browser exactly where to lock or "snap" the slide 
+    into place when a user scrolls. for this case it's :start. there
+    is also center and end */
+    scroll-snap-align: start;
+
+}
+.highlights-container .highlights .words-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.highlights-container .highlights .words-div, .image-div {
+    flex: 1;
+    width: 50%;
+}
+.highlights-container .highlights .image-div .highlight-image {
+    /* keep image's crisp without stretching */
+    object-fit: cover;
+    width: 700px;
+}
+.highlights .words-div .button-link {
+    padding: 15px;
+    color: white;
+    background-color: rgb(3, 3, 82);
+    border-radius: 5px;
+    font-size: medium;
+}
+.highlights .words-div .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.highlights .words-div .carousel-dots .dot {
+    background-color: grey;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: flex-end;
+}
+.highlights .words-div .carousel-dots .dot-active {
+    background-color: rgb(3, 3, 82);
+    padding: 10px;
+    border-radius: 50%;
+}
+
