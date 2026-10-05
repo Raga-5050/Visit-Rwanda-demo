@@ -125,6 +125,8 @@ header .navbar .list .nav-item .home-icon {
     object-fit: cover;
     object-position: center;
     width: 700px;
+    height: 500px;
+    overflow: hidden;
 }
 .highlights .words-div .title {
 margin-bottom: 0;
@@ -144,21 +146,36 @@ margin-bottom: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
-    
-
 }
 .highlights .words-div .carousel-dots .dot {
     background-color: grey;
     padding: 10px;
     border-radius: 50%;
     display: inline-bl0ck;
-    
-
 }
  .carousel-dots .dot-active {
     background-color: rgb(3, 3, 82);
      padding: 10px;
     border-radius: 50%;
     display: inline-block;
+}
+.attributes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.attributes-container .attribute-even {
+    background-color: var(--second-white);
+}
+.attributes-container .atribute-image-div .attribute-image {
+    width: 400px;
+    height:300px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.attributes-container .atribute-image-div .attribute-image:hover {
+    opacity: 80%;
+}
+.attributes-container .headings .section-heading {
+    font-size: 40px;
 }
 
