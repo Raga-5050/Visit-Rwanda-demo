@@ -189,7 +189,42 @@ margin-bottom: 0;
 .sports-partnerships .content-container .badges-div .badge {
     width: 700px;
 }
-footer {
+.footer {
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(3, 3, 82);
+    height: 100px;
+}
+.footer .logo {
+    display: flex;
+    gap: 40px;
+}
+.footer .logo .logo-item {
+    object-fit: cover;
+    height: 50px;
+    margin-left: 30px;
+}
+.footer .logo .copyright {
+    font-size: 20px;
+    color: white;
+
+}
+.footer .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.footer .list .foot-link {
+    color: white;
+    font-size: 20px;
+}
+.footer .social-icons {
+    margin-right: 40px;
+    display: flex;
+    gap: 15px;
+}
+.footer .social-icons .foot-icon {
+    width: 20px;
 }
