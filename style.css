@@ -229,4 +229,57 @@ margin-bottom: 0;
     width: 20px;
 }
 
+/* pre-footer */
+.pre-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+.pre-footer .details {
+    color: white;
+    background-color: rgb(1, 1, 110);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+} 
+/* to hide the accordion default list marker arrow */
+.title-container::marker {
+    display: none;
+}
+.title-container {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 20px;
+    /* to prevent users from highlighting or selecting text when they click on it. */
+    user-select: none;
+}
+.title-container:hover {
+    opacity: 80%;
+}
+.details[open] .accordion-icon {
+    transform: rotate(45deg);
+}
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+.detail-container {
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.details[open] .detail-container {
+    max-height: 300px;
+    padding: 20px;
+}
 

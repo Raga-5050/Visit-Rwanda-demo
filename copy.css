@@ -1,0 +1,59 @@
+/* CSS Styling & Pure CSS Animation */
+.accordion-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Hide the browser's default list marker arrow */
+.accordion-header::-webkit-details-marker {
+  display: none;
+}
+.accordion-header {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+/* Visual Anchor: Rotate the icon when open */
+.accordion-item[open] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-icon {
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+/* The expanding animation container */
+.accordion-content {
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* When the details tag has the [open] attribute, expand the content */
+.accordion-item[open] .accordion-content {
+  max-height: 200px; /* Adjust based on your estimated text height */
+  padding: 1rem 1.5rem;
+}
